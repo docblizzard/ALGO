@@ -1,0 +1,10 @@
+{
+    "french_stopwords" : 
+    [
+        "le", "la", "les", "un", "une", "des", "du", "de", "dans", "et", "en", "au",
+        "aux", "avec", "ce", "ces", "pour", "par", "sur", "pas", "plus", "où", "mais",
+        "ou", "donc", "ni", "car", "ne", "que", "qui", "quoi", "quand", "à", "son",
+        "sa", "ses", "ils", "elles", "nous", "vous", "est", "sont", "cette", "cet",
+        "aussi", "être", "avoir", "faire", "comme", "tout", "bien", "mal", "on", "lui"
+    ]
+}
