@@ -1,10 +1,13 @@
 from flask import Flask, request, jsonify
 from flaskext.mysql import MySQL
-import pickle
 from model import predictNew
 from setupDb import setupDB
 
 app = Flask(__name__)
+@app.before_request
+def initialize():
+    print("hello")
+    setupDB()
 
 mysql = MySQL()
 mysql.init_app(app)
@@ -13,11 +16,6 @@ app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 app.config['MYSQL_DATABASE_USER'] = 'flask_user'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'password'
 app.config['MYSQL_DATABASE_DB'] = 'flask_db'
-
-
-@app.before_first_request
-def initialize():
-    setupDB()
 
 @app.route("/")
 def hello_world():

@@ -5,7 +5,7 @@ def setupDB():
     cursor = db.cursor()
 
     try:
-        with open("db_init", "r") as f:
+        with open("db_init.sql", "r") as f:
             sql_commands = f.read()
             for command in sql_commands.split(";"):
                 if command.strip():
@@ -18,4 +18,5 @@ def setupDB():
     finally:
         cursor.close()
         db.close()
-        print("Database and table setup complete!")
+
+setupDB()
